@@ -4,16 +4,17 @@ with open("README.md", "r") as fp:
   long_description = fp.read()
 
 setup(
-  name="...",
-  version="...",
+  name="mediqaws",
+  version="0.0.4",
   author="Smartmediq",
   author_email="dev@smartmediq.com",
-  description="...",
+  description="A collection of AWS clients for SmartMediQ.",
   long_description=long_description,
   long_description_content_type="text/markdown",
-  url="https://github.com/SmartMediQ/...",
+  url="https://github.com/SmartMediQ/mediqaws",
+  package_dir={"": "src"},
   packages=find_packages(
-    where="src",
+    where="src", include=["mediqaws.*"],
   ),
   classifiers=[
     "Operating System :: OS Independent",
@@ -25,6 +26,8 @@ setup(
   ],
   python_requires=">=3.11",
   install_requires=[
-    ...
+    "boto3",
+    "pydantic",
+    "werkzeug",
   ],
 )
