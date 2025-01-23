@@ -4,7 +4,7 @@ A collection of AWS clients, and asecrets manager.
 
 ## Install
 
-[`pip install mediqaws`]
+`pip install mediqaws`
 
 ## Usage
 
