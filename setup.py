@@ -5,10 +5,10 @@ with open("README.md", "r") as fp:
 
 setup(
   name="mediqaws",
-  version="0.0.4",
+  version="0.0.5",
   author="Smartmediq",
   author_email="dev@smartmediq.com",
-  description="A collection of AWS clients for SmartMediQ.",
+  description="A collection of AWS clients, and a secrets manager.",
   long_description=long_description,
   long_description_content_type="text/markdown",
   url="https://github.com/SmartMediQ/mediqaws",
