@@ -22,7 +22,10 @@ class SecretsManager:
       response = self.client.get_secret_value(SecretId=secret_name)
       secret = response.get("SecretString") or response.get("SecretBinary")
       if isinstance(secret, str):
-        secret = json.loads(secret)
+        try:
+          secret = json.loads(secret)
+        except json.JSONDecodeError:
+          pass
         
       # Cache the secret for the next ttl seconds
       self.cache[secret_name] = secret
